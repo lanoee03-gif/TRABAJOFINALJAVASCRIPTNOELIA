@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESUPUESTO | SPORTKICKS</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/validate.js" defer></script>
+    
+</head>
+<body>
+    <header>
+       <div class="container header-container">
+        <div class="logo">SPORTKICKS</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="galeria.html">Productos</a></li>
+                <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    </header>
+
+    <main>
+        <h1>Solicitar presupuesto</h1>
+        <form id="presupuesto-form">
+            <fieldset>
+                <legend>Datos de Contacto</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required maxlength="15">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required maxlength="40">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required maxlength="9">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            <fieldset>
+                <legend>Presupuesto</legend>
+                <label for="producto">Producto:</label>
+                <select id="producto" name="producto">
+                    <option value="jordan" data-precio="180">
+                        Jordan 1 Retro - 180 €
+                    </option>
+
+                    <option value="airforce" data-precio="120">
+                         Nike Air Force 1 - 120 €
+                    </option>
+
+                    <option value="yeezy" data-precio="250">
+                        Adidas Yeezy - 250 €
+                    </option>
+                </select>
+                <label for="plazo">Plazo (días):</label>
+                <input type="number" id="plazo" name="plazo" min="1" value="1">
+                
+                <label>
+                <input type="checkbox" name="extras" value="10">
+                    Envío urgente (+10 €)
+                </label><br>
+
+                <label>
+                <input type="checkbox" name="extras" value="20">
+                    Personalización (+20 €)
+                </label><br>
+
+                <label>
+                <input type="checkbox" name="extras" value="15">
+                    Caja premium (+15 €)
+                </label>
+                    <p>Presupuesto Total: <span id="total">0</span></p>
+            </fieldset>
+            <label>
+                <input type="checkbox" id="condiciones" required> Acepto las condiciones de privacidad
+            </label>
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetear</button>
+        </form>
+    </main>
+
+    <footer>
+
+    <div class="social-media">
+
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="../images/facebook.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="../images/Instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://twitter.com/" target="_blank">
+            <img src="../images/twiter.png" alt="Twitter">
+        </a>
+
+    </div>
+
+    <p>Paseo Marítimo de Aguadulce, Almería</p>
+
+    <p>&copy; 2026 SPORTKICKS. Todos los derechos reservados.</p>
+
+    <p>
+        <a href="#">Aviso legal</a> |
+        <a href="#">Política de privacidad</a>
+    </p>
+
+    </footer>
+
+</body>
+</html>

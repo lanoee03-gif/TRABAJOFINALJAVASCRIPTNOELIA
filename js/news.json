@@ -1,0 +1,17 @@
+[
+    {
+        "titulo": "Lanzamiento de nuevo producto",
+        "fecha": "2023-05-15",
+        "contenido": "Estamos emocionados de anunciar el lanzamiento de nuestro nuevo producto."
+    },
+    {
+        "titulo": "Certificación de empresa verde",
+        "fecha": "2023-04-28",
+        "contenido": "Hemos sido certificados como una empresa que cumple con estándares de sostenibilidad."
+    },
+    {
+        "titulo": "Participación en la conferencia TechX",
+        "fecha": "2023-04-10",
+        "contenido": "Nuestro equipo participó en la conferencia TechX presentando nuestras innovaciones."
+    }
+]

@@ -1,0 +1,26 @@
+
+{
+  "noticias": [
+    {
+      "titulo": "¡Nueva colección Jordan 2025!",
+      "fecha": "15 Ene 2025",
+      "imagen": "https://placehold.co/400x250/4ECDC4/FFFFFF?text=Jordan",
+      "descripcion": "Lanzamos la esperada colección Jordan Spring 2025 con diseños exclusivos y colores vibrantes.",
+      "link": "https://ejemplo.com/jordan2025"
+    },
+    {
+      "titulo": "Nike Dunk Low: Edición limitada",
+      "fecha": "12 Ene 2025",
+      "imagen": "https://placehold.co/400x250/4ECDC4/FFFFFF?text=Nike+Dunk",
+      "descripcion": "Solo 500 pares disponibles. No te quedes sin las tuyas.",
+      "link": "https://ejemplo.com/nike-dunk"
+    },
+    {
+      "titulo": "Adidas colabora con artistas locales",
+      "fecha": "10 Ene 2025",
+      "imagen": "https://placehold.co/400x250/45B7D1/FFFFFF?text=Adidas+Art",
+      "descripcion": "Descubre las nuevas zapatillas diseñadas por artistas emergentes.",
+      "link": "https://ejemplo.com/adidas-art"
+    }
+  ]
+}

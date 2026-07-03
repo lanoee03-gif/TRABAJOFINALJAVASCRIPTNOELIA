@@ -1,0 +1,535 @@
+
+head>
+    <meta charset="UTF-8"> /*Establece la codificación de caracteres a UTF-8, que soporta caracteres especiales. -->*/
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> /* Configura la vista para dispositivos móviles, asegurando que el ancho se ajuste al dispositivo.*/
+    <title>SportKicks - Venta de Zapatillas Premium</title> /* Establece el título de la página que aparece en la pestaña del navegador.*/
+    <style>
+        /* Reset básico */
+         *{
+            margin: 0; /* Elimina el margen predeterminado de todos los elementos. */
+            padding: 0; /* Elimina el relleno predeterminado de todos los elementos. */
+            box-sizing: border-box; /* Cambia el modelo de caja para que el ancho y alto incluyan el borde y el relleno. */
+          }
+        
+        body {
+            /* 3. Estilos del cuerpo de la página */
+            font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6; /* Establece la altura de línea a 1.6 para mejorar la legibilidad. */
+            color: #333; /* Establece el color del texto a un gris oscuro. */
+           
+        }
+           /*ME QUEDADO POR AQUI CORRIGIENDO ERRORES, MEQUEDA TERMINAR ERRORES Y SUBIRLO DE NUEVO A GIT HUB Y ENVIAR REL ENLACE CORRECTO*/
+        
+             /* 7. Estilos de los enlaces del menú */
+        
+             .horizontal-album {
+    padding: 20px;
+}
+.photo-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* ajusta esto a tu gusto */
+    display: block;
+    margin: 0 auto;}
+.photo-box {
+    text-align: center;
+}
+.photo-box img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.photo-gallery {
+    width: 100%;
+}
+
+.photo-box img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#noticias-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#noticias-container div {
+    width: 300px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+#noticias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 👈 esto separa las tarjetas */
+    justify-content: center;
+}
+#noticias-container div {
+    width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background: white;
+}
+#noticias-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px; /* 👈 separa imagen del texto */
+    border-radius: 8px;
+}
+
+#contacto {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.contacto-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.mapa iframe {
+    border-radius: 10px;
+}
+
+.datos-contacto {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.datos-contacto p {
+    margin: 10px 0;
+}
+
+.horizontal-album {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.album-container {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    align-items: center;
+    gap: 20px; /* Separación entre imágenes */
+    flex-wrap: wrap; /* Si no caben, bajan a otra línea */
+    margin-top: 20px;
+}
+
+.album-item img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.horizontal-album button {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+ 
+}
+
+nav a.active {
+    background-color: #000;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+#map{
+    width:500px;
+    height:350px;
+    border:1px solid #000;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.social-media{
+    margin-bottom:15px;
+}
+
+.social-media img{
+    width:35px;
+    height:35px;
+    margin:0 10px;
+    transition:0.3s;
+}
+
+.social-media img:hover{
+    transform:scale(1.2);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.album-container {
+    display: flex; /* Usamos flexbox para alinear los elementos en línea */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si hay muchas imágenes */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+.album-item {
+    flex: 0 0 auto; /* Evita que los elementos se estiren y permite que mantengan su tamaño */
+    width: 300px; /* Ancho fijo para cada imagen */
+}
+.album-item img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+        
+        /* Layout */
+        .container {
+            width: 100%; /* Establece el ancho del contenedor al 100% del elemento padre. */
+            max-width: 1200px; /* Establece un ancho máximo de 1200px para el contenedor. */
+            margin: 0 auto; /* Centra el contenedor horizontalmente. */
+            padding: 0 40px; /* Establece un relleno de 15px a los lados del contenedor. */
+        }
+        
+        /* Header */
+        header {
+            background: #fff; /* Establece el fondo del encabezado a blanco. */
+            padding: 50px 0; /* Establece un relleno de 20px en la parte superior e inferior del encabezado. */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Agrega una sombra sutil debajo del encabezado. */
+            position: sticky; /* Hace que el encabezado se mantenga en la parte superior al hacer scroll. */
+            top: 0; /* Establece la posición superior del encabezado en 0. */
+            z-index: 100; /* Asegura que el encabezado esté por encima de otros elementos. */
+        }
+        
+        .horizontal-nav .nav-list {
+            display: flex; /* Establece la lista de navegación como un contenedor flex. */
+            list-style: none; /* Elimina los puntos de la lista. */
+            padding: 0; /* Elimina el relleno de la lista. */
+            margin: 0; /* Elimina el margen de la lista. */
+        }
+
+        .header-container {
+            display: flex; /* Establece el contenedor del encabezado como un contenedor flex. */
+            justify-content: space-between; /* Distribuye el espacio entre los elementos del encabezado. */
+            align-items: center; /* Alinea los elementos del encabezado verticalmente al centro. */
+        }
+        
+        .logo {
+            font-size: 24px; /* Establece el tamaño de la fuente del logotipo a 24px. */
+            font-weight: bold; /* Establece el peso de la fuente del logotipo a negrita. */
+            color: #e63946; /* Establece el color del logotipo a un tono de rojo. */
+        }
+        
+        nav ul {
+            display: flex; /* Establece la lista de navegación como un contenedor flex. */
+            list-style: none; /* Elimina los puntos de la lista. */
+            gap: 20px; /* Establece un espacio de 20px entre los elementos de la lista. */
+        }
+        
+        .navbar-menu a {
+            color: var(--df-neutral-high-contrast);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            padding: 0 15px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        nav a {
+            text-decoration: none; /* Elimina el subrayado de los enlaces. */
+            color: #333; /* Establece el color del texto de los enlaces a un gris oscuro. */
+            font-weight: 500; /* Establece el peso de la fuente de los enlaces a 500 (semi-negrita). */
+        }
+        
+        nav a:hover {
+            color: #e63946; /* Cambia el color del texto de los enlaces a rojo al pasar el mouse. */
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 400px; /* Establece la altura de la sección hero a 400px. */
+            background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/49caf6e1-bd92-4693-8f96-eddc01ffe3ab.png') no-repeat center center/cover; /* Establece una imagen de fondo que cubre toda la sección. */
+            display: flex; /* Establece la sección hero como un contenedor flex. */
+            align-items: center; /* Alinea los elementos dentro de la sección hero verticalmente al centro. */
+            margin-bottom: 120px; /* Establece un margen inferior de 120px para separar la sección hero de la siguiente. */
+        }
+        
+        .hero-content {
+            background: rgba(255,255,255,0.8); /* Establece un fondo blanco semitransparente para el contenido de la sección hero. */
+            padding: 30px; /* Establece un relleno de 30px alrededor del contenido. */
+            max-width: 500px; /* Establece un ancho máximo de 500px para el contenido. */
+            border-radius: 5px; /* Establece un radio de borde de 5px para esquinas redondeadas. */
+        }
+        
+        .hero h1 {
+            font-size: 32px; /* Establece el tamaño de la fuente del título a 32px. */
+            margin-bottom: 40px; /* Establece un margen inferior de 40px para separar el título del siguiente elemento. */
+            color: #333; /* Establece el color del texto del título a un gris oscuro. */
+        }
+        
+        .hero p {
+            margin-bottom: 20px; /* Establece un margen inferior de 20px para separar el párrafo del siguiente elemento. */
+        }
+        
+        .btn {
+            display: inline-block; /* Establece el botón como un bloque en línea. */
+            padding: 10px 20px; /* Establece un relleno de 10px en la parte superior e inferior y 20px en los lados. */
+            background: #e63946; /* Establece el fondo del botón a un tono de rojo. */
+            color: white; /* Establece el color del texto del botón a blanco. */
+            text-decoration: none; /* Elimina el subrayado del texto del botón. */
+            border-radius: 5px; /* Establece un radio de borde de 5px para esquinas redondeadas. */
+            transition: all 0.3s ease; /* Establece una transición suave para todos los cambios de estilo en 0.3 segundos. */
+        }
+        
+        .btn:hover {
+            background: #c1121f; /* Cambia el fondo del botón a un tono más oscuro de rojo al pasar el mouse. */
+        }
+        
+        /* Featured Products */
+        .products-section {
+            padding: 80px 0; /* Establece un relleno de 80px en la parte superior e inferior de la sección de productos. */
+        }
+        
+        .section-title {
+            text-align: center; /* Centra el texto del título de la sección. */
+            margin-bottom: 50px; /* Establece un margen inferior de 50px para separar el título de la siguiente sección. */
+            font-size: 36px; /* Establece el tamaño de la fuente del título a 36px. */
+        }
+        
+        .products-grid {
+            display: grid; /* Establece la cuadrícula de productos como un contenedor de cuadrícula. */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas que se ajustan automáticamente con un ancho mínimo de 250px. */
+            gap: 30px; /* Establece un espacio de 30px entre los elementos de la cuadrícula. */
+            margin-bottom: 40px; /* Establece un margen inferior de 40px para separar la cuadrícula de productos de la siguiente sección. */
+        }
+        
+        .product-card {
+            border: 1px solid #ddd; /* Establece un borde gris claro alrededor de la tarjeta del producto. */
+            border-radius: 5px; /* Establece un radio de borde de 5px para esquinas redondeadas. */
+            overflow: hidden; /* Oculta cualquier contenido que se desborde de la tarjeta. */
+            transition: transform 0.3s ease; /* Establece una transición suave para la transformación en 0.3 segundos. */
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px); /* Mueve la tarjeta hacia arriba 5px al pasar el mouse. */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Agrega una sombra sutil alrededor de la tarjeta al pasar el mouse. */
+        }
+        
+        .product-image {
+            height: 200px; /* Establece la altura de la imagen del producto a 200px. */
+            background: #f5f5f5; /* Establece un fondo gris claro para la imagen del producto. */
+            display: flex; /* Establece la imagen como un contenedor flex. */
+            align-items: center; /* Alinea los elementos dentro de la imagen verticalmente al centro. */
+            justify-content: center; /* Alinea los elementos dentro de la imagen horizontalmente al centro. */
+        }
+        
+        .product-image img {
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor. */
+            max-height: 100%; /* Asegura que la imagen no exceda la altura de su contenedor. */
+        }
+        
+        .product-info {
+            padding: 15px; /* Establece un relleno de 15px alrededor de la información del producto. */
+        }
+        
+        .product-title {
+            font-size: 18px; /* Establece el tamaño de la fuente del título del producto a 18px. */
+            margin-bottom: 10px; /* Establece un margen inferior de 10px para separar el título del precio. */
+        }
+        
+        .product-price {
+            font-weight: bold; /* Establece el peso de la fuente del precio a negrita. */
+            color: #e63946; /* Establece el color del precio a un tono de rojo. */
+            font-size: 20px; /* Establece el tamaño de la fuente del precio a 20px. */
+        }
+        
+        /* News Section */
+        .news-section {
+            background: #f8f9fa; /* Establece el fondo de la sección de noticias a un tono gris claro. */
+            padding: 40px 0; /* Establece un relleno de 40px en la parte superior e inferior de la sección de noticias. */
+            margin-bottom: 40px; /* Establece un margen inferior de 40px para separar la sección de noticias de la siguiente. */
+        }
+        
+        .news-grid {
+            display: grid; /* Establece la cuadrícula de noticias como un contenedor de cuadrícula. */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas que se ajustan automáticamente con un ancho mínimo de 300px. */
+            gap: 20px; /* Establece un espacio de 20px entre los elementos de la cuadrícula. */
+        }
+        
+        .news-card {
+            background: white; /* Establece el fondo de la tarjeta de noticias a blanco. */
+            border-radius: 5px; /* Establece un radio de borde de 5px para esquinas redondeadas. */
+            overflow: hidden; /* Oculta cualquier contenido que se desborde de la tarjeta. */
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Agrega una sombra sutil alrededor de la tarjeta de noticias. */
+        }
+        
+        .news-image {
+            height: 180px; /* Establece la altura de la imagen de noticias a 180px. */
+            background: #ddd; /* Establece un fondo gris claro para la imagen de noticias. */
+        }
+        
+        .news-content {
+            padding: 20px; /* Establece un relleno de 20px alrededor del contenido de noticias. */
+        }
+        
+        .news-title {
+            font-size: 20px; /* Establece el tamaño de la fuente del título de noticias a 20px. */
+            margin-bottom: 10px; /* Establece un margen inferior de 10px para separar el título del resto del contenido. */
+        }
+        
+        .news-date {
+            color: #666; /* Establece el color de la fecha a un gris más claro. */
+            font-size: 14px; /* Establece el tamaño de la fuente de la fecha a 14px. */
+            margin-bottom: 10px; /* Establece un margen inferior de 10px para separar la fecha del resto del contenido. */
+        }
+        
+        .news-excerpt {
+            color: #555; /* Establece el color del extracto de noticias a un gris intermedio. */
+            margin-bottom: 15px; /* Establece un margen inferior de 15px para separar el extracto del enlace "Leer más". */
+        }
+        
+        .read-more {
+            color: #e63946; /* Establece el color del enlace "Leer más" a un tono de rojo. */
+            font-weight: 500; /* Establece el peso de la fuente del enlace "Leer más" a 500 (semi-negrita). */
+        }
+        
+        /* Footer */
+        footer {
+            background: #333; /* Establece el fondo del pie de página a un tono oscuro de gris. */
+            color: white; /* Establece el color del texto del pie de página a blanco. */
+            padding: 30px 0; /* Establece un relleno de 30px en la parte superior e inferior del pie de página. */
+            text-align: center; /* Centra el texto en el pie de página. */
+        }
+        
+        .footer-links {
+            display: flex; /* Establece el contenedor de enlaces del pie de página como un contenedor flex. */
+            justify-content: center; /* Centra los enlaces horizontalmente. */
+            gap: 20px; /* Establece un espacio de 20px entre los enlaces. */
+            margin-bottom: 20px; /* Establece un margen inferior de 20px para separar los enlaces del texto. */
+        }
+        
+        .footer-links a {
+            color: white; /* Establece el color de los enlaces del pie de página a blanco. */
+            text-decoration: none; /* Elimina el subrayado de los enlaces. */
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline; /* Agrega un subrayado a los enlaces al pasar el mouse. */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) { /* Establece estilos para dispositivos con un ancho máximo de 768px. */
+            .header-container {
+                flex-direction: column; /* Cambia la dirección de los elementos en el contenedor del encabezado a columna. */
+                gap: 15px; /* Establece un espacio de 15px entre los elementos. */
+            }
+            
+            nav ul {
+                flex-wrap: wrap; /* Permite que los elementos de la lista de navegación se envuelvan en varias líneas. */
+                justify-content: center; /* Centra los elementos de la lista de navegación horizontalmente. */
+            }
+            
+            .hero {
+                height: 300px; /* Establece la altura de la sección hero a 300px en dispositivos móviles. */
+                justify-content: center; /* Centra los elementos dentro de la sección hero verticalmente. */
+                text-align: center; /* Centra el texto dentro de la sección hero. */
+            }
+            
+            .hero-content {
+                margin: 0 15px; /* Establece un margen de 15px a los lados del contenido de la sección hero. */
+            }
+        }
+        
+        body {
+            font-family: Arial, sans-serif; /* Establece la fuente del cuerpo a Arial, con una alternativa sans-serif. */
+            margin: 0; /* Elimina el margen del cuerpo. */
+            padding: 0; /* Elimina el relleno del cuerpo. */
+        }
+        
+        header {
+            background-color: #333; /* Establece el fondo del encabezado a un tono oscuro de gris. */
+            color: white; /* Establece el color del texto del encabezado a blanco. */
+            padding: 10px 20px; /* Establece un relleno de 10px en la parte superior e inferior y 20px a los lados. */
+            position: fixed; /* Establece la posición del encabezado como fija para que permanezca en la parte superior al hacer scroll. */
+            width: 100%; /* Establece el ancho del encabezado al 100% del contenedor. */
+            top: 0; /* Establece la posición superior del encabezado en 0. */
+            z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos. */
+        }
+        
+        header logo img {
+            height: 50px; /* Establece la altura de la imagen del logotipo a 50px. */
+        }
+        
+        nav ul {
+            list-style: none; /* Elimina los puntos de la lista de navegación. */
+            padding: 0; /* Elimina el relleno de la lista de navegación. */
+        }
+        
+        nav ul li {
+            display: inline; /* Establece los elementos de la lista como en línea. */
+            margin-right: 20px; /* Establece un margen derecho de 20px entre los elementos de la lista. */
+        }
+        
+        nav ul li a {
+            color: white; /* Establece el color de los enlaces de la lista a blanco. */
+            text-decoration: none; /* Elimina el subrayado de los enlaces. */
+        }
+        
+        main {
+            padding-top: 80px; /* Establece un relleno superior*/
+             }
